@@ -152,6 +152,40 @@
                     "href": "/community/?subtopic=resellers"
                 }                
             ]
+        },
+        {
+            "name": "Forum",
+            "iconUrl": "/images/navigation/icon-forum.gif",
+            "entries": [
+                {
+                    "name": "World Boards",
+                    "href": "/forum/?subtopic=worldboards"
+                }
+            ]
+        },
+        {
+            "name": "Account",
+            "iconUrl": "/images/navigation/icon-account.gif",
+            "entries": [
+                {
+                    "name": "Account Management",
+                    "href": "/account/?subtopic=accountmanagement&page=overview"
+                },
+                {
+                    "name": "Create Account",
+                    "href": "/account/?subtopic=createaccount"
+                }
+            ]
+        },
+        {
+            "name": "Support",
+            "iconUrl": "/images/navigation/icon-support.gif",
+            "entries": [
+                {
+                    "name": "FAQ",
+                    "href": "/support/?subtopic=gethelp"
+                }
+            ]
         }
     ]
 }
