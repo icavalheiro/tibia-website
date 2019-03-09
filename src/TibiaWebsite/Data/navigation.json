@@ -1,0 +1,64 @@
+[
+    {
+        "name": "News",
+        "iconUrl": "/images/navigation/icon-news.gif",
+        "entries": [
+            {
+                "name": "Latest News",
+                "href": "/news/?subtopic=latestnews"
+            },
+            {
+                "name": "News Archive",
+                "href": "/news/?subtopic=newsarchive"
+            },
+            {
+                "name": "Event Schedule",
+                "href": "/news/?subtopic=eventcalendar"
+            }
+        ]
+    },
+    {
+        "name": "About Tibia",
+        "iconUrl": "/images/navigation/icon-abouttibia.gif",
+        "entries": [
+            {
+                "name": "What is Tibia?",
+                "href": "/abouttibia/?subtopic=whatistibia"
+            },
+            {
+                "name": "Screenshots",
+                "href": "/abouttibia/?subtopic=screenshots"
+            },
+            {
+                "name": "Game Features",
+                "href": "/abouttibia/?subtopic=gamefeatures"
+            },
+            {
+                "name": "Premium Features",
+                "href": "/abouttibia/?subtopic=premiumfeatures"
+            },
+            {
+                "name": "About CipSoft",
+                "href": "/abouttibia/?subtopic=aboutcipsoft"
+            }
+        ]
+    },
+    {
+        "name": "Game Guides",
+        "iconUrl": "/images/navigation/icon-gameguides.gif",
+        "entries": [
+            {
+                "name": "Quick Start",
+                "href": "/gameguides/?subtopic=quickstart"
+            },
+            {
+                "name": "Manual",
+                "href": "/gameguides/?subtopic=manual"
+            },
+            {
+                "name": "Security Hints",
+                "href": "/gameguides/?subtopic=securityhints"
+            }
+        ]
+    }
+]

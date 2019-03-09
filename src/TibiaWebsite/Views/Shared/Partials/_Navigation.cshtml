@@ -1,3 +1,10 @@
+@using TibiaWebsite.Models.Navigation
+@using TibiaWebsite.Helpers
+
+@{
+    var navigationCategories = NavigationHelper.GetAllCategories();
+}
+
 <div class="navigation col-2">
     <div class="logo row">
         <a href="~/"><img src="~/images/navigation/tibia-logo-artwork-top.gif"/></a>
@@ -43,12 +50,34 @@
         <div class="col-12">
             <div class="first-box box-header row">
             </div>
-            <div class="box-content row">
-                <div class="box-side-chain left"></div>
-                <div class="col center">
-                    links
-                </div>
-                <div class="box-side-chain right"></div>
+            <div class="box-content links row">
+
+                <!-- Loop through the categories and print them in the navigation menu -->
+                @foreach(var category in navigationCategories){
+                    // Create a new id so that we can toggle the links via JS later
+                    var categoryId = Guid.NewGuid();
+                    <div class="col category-button">
+                        <button data-toggle-id="@categoryId" data-type="toggle">
+                            <span class="row">
+                                <span class="icon" style="background-image:url(@category.iconUrl)"></span>
+                                <span class="col">@category.name</span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <!-- Toggable items -->
+                    <div class="box-side-chain left" data-toggle-id="@categoryId" style="display: none;"></div>
+                    <div class="col center" data-toggle-id="@categoryId" style="display: none;">
+                        <ul>
+                            @foreach(var entry in category.entries){
+                                <li>
+                                    <a href="@entry.href">@entry.name</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="box-side-chain right" data-toggle-id="@categoryId" style="display: none;"></div>
+                }
             </div>
             <div class="box-footer row">
             </div>

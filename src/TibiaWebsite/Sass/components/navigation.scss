@@ -23,6 +23,8 @@
         &:hover{
             background-image: url('/images/navigation/mediumbutton-over.gif');
         }
+
+        cursor: pointer;
     }
 
     a{
@@ -57,6 +59,15 @@
     .box{
         min-width: 200px;
         margin-bottom: 15px;
+
+        ul{
+            padding: 0;
+            margin: 0;
+
+            li{
+                list-style-type: none;
+            }
+        }
 
         .box-header, .box-footer{
             background-image: url('/images/navigation/box-top.gif');
@@ -94,9 +105,49 @@
                 padding-bottom: 2px;
                 text-align: center;
                 line-height: 11px;
+            }
 
-                button{
-                    cursor: pointer;
+            &.links{
+                text-align: center;
+
+                .center{
+                    background-image: none;
+                    background-color: rgb(13, 46, 43);
+                }
+
+                .category-button{
+                    padding: 0;
+                    height: 32px;
+                    button{
+                        color: rgb(231, 189, 149);
+                        background-image: url('/images/navigation/button-background.gif');
+                        width: 200px;
+                        height: 32px;
+                        padding: 0;
+                        margin: 0;
+
+                        
+                        &:focus, &:hover {
+                            background-image: url('/images/navigation/button-background-over.gif');
+                            outline: none;
+                        }
+
+                        .row{
+                            width: 150px;
+                            margin: auto;
+
+                            .col{
+                                padding: 0;
+                            }
+    
+                            .icon{
+                                width: 32px;
+                                height: 32px;
+                                background-repeat: no-repeat;
+                                background-position: center top;
+                            }
+                        }
+                    }
                 }
             }
         }
