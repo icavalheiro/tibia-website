@@ -3,5 +3,11 @@
     background-position: center top;
     background-color: #051122;
     min-height: 100vh;
+    align-content: center;
     background-image: url('/images/background-artwork.jpg');
+}
+
+.layout-base .content-holder{
+    max-width: 1200px;
+    margin: auto;
 }
