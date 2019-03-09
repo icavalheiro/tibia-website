@@ -20,15 +20,22 @@ function tieToggleButtons(){
     $('button[data-type=toggle]').each(function(){
         var btn = $(this);
         var id = btn.attr('data-toggle-id');
+        var storageId = "navigation-item: " + id;
 
         //add a listener to click event
         btn.click(function(){
             $('div[data-toggle-id='+id+']').each(function(){
                 var div = $(this);
-                div.toggle(0.0001);
+                div.toggle(0.0001);//defualt is 400
                 btn.toggleClass('opened');
+
+                window.localStorage.setItem(storageId, btn.hasClass('opened'));
             })
         })
+
+        if(window.localStorage.getItem(storageId) == "true"){
+            btn.click();
+        }
     })
 }
 

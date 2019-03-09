@@ -56,7 +56,7 @@
                 <!-- Loop through the categories and print them in the navigation menu -->
                 @foreach(var category in navigationCategories){
                     // Create a new id so that we can toggle the links via JS later
-                    var categoryId = Guid.NewGuid();
+                    var categoryId = category.name.Replace(" ", "-");
                     <div class="col category-button">
                         <button data-toggle-id="@categoryId" data-type="toggle">
                             <span class="row">
@@ -71,9 +71,11 @@
                     <div class="col center" data-toggle-id="@categoryId" style="display: none;">
                         <ul>
                             @foreach(var entry in category.entries){
-                                <li>
-                                    <a href="@entry.href">@entry.name</a>
-                                </li>
+                                <a href="@entry.href">
+                                    <li>
+                                        @entry.name
+                                    </li>
+                                </a>
                             }
                         </ul>
                     </div>

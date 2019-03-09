@@ -68,6 +68,90 @@
                     "href": "/gameguides/?subtopic=securityhints"
                 }
             ]
+        },
+        {
+            "name": "Library",
+            "iconUrl": "/images/navigation/icon-library.gif",
+            "entries": [
+                {
+                    "name": "Creatures",
+                    "href": "/library/?subtopic=creatures"
+                },
+                {
+                    "name": "Spells",
+                    "href": "/library/?subtopic=spells"
+                },
+                {
+                    "name": "Achievements",
+                    "href": "/library/?subtopic=achievements"
+                },
+                {
+                    "name": "World Quests",
+                    "href": "/library/?subtopic=worldquests"
+                },
+                {
+                    "name": "Experience Table",
+                    "href": "/library/?subtopic=experiencetable"
+                },
+                {
+                    "name": "Maps",
+                    "href": "/library/?subtopic=maps"
+                },
+                {
+                    "name": "Genesis",
+                    "href": "/library/?subtopic=genesis"
+                }
+            ]
+        },
+        {
+            "name": "Community",
+            "iconUrl": "/images/navigation/icon-community.gif",
+            "entries": [
+                {
+                    "name": "Characters",
+                    "href": "/community/?subtopic=characters"
+                },
+                {
+                    "name": "Worlds",
+                    "href": "/community/?subtopic=worlds"
+                },
+                {
+                    "name": "Highscores",
+                    "href": "/community/?subtopic=highscores"
+                },
+                {
+                    "name": "Leaderscores",
+                    "href": "/community/?subtopic=leaderboards"
+                },
+                {
+                    "name": "Kill Statistics",
+                    "href": "/community/?subtopic=killstatistics"
+                },
+                {
+                    "name": "Houses",
+                    "href": "/community/?subtopic=houses"
+                },
+                {
+                    "name": "Guilds",
+                    "href": "/community/?subtopic=guilds"
+                },
+                {
+                    "name": "Polls",
+                    "href": "/community/?subtopic=polls"
+                },
+                {
+                    "name": "Feedback Form",
+                    "href": "/community/?subtopic=feedbackform"
+                },
+                {
+                    "name": "Fansites",
+                    "href": "/community/?subtopic=fansites"
+                },
+                {
+                    "name": "Resellers",
+                    "href": "/community/?subtopic=resellers"
+                }                
+            ]
         }
     ]
 }
