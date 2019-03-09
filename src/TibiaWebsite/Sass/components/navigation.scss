@@ -1,4 +1,71 @@
 .navigation{
-    background-color: chocolate;
     padding: 3px 0;
+
+    .logo{
+        img{
+            z-index: 2;
+        }
+    }
+
+    .row{
+        margin: 0;
+    }
+    
+    .col-12{
+        padding: 0;
+    }
+
+    .first-box{
+        margin-top: -5px;
+    }
+
+    .box{
+        min-width: 200px;
+
+        .box-header, .box-footer{
+            background-image: url('/images/navigation/box-top.gif');
+            background-repeat: no-repeat;
+            background-position: center top;
+            height: 12px;
+        }
+    
+        .box-content{
+            .box-side-chain{
+                background-image: url('/images/navigation/chain.gif');
+                background-repeat: repeat-y;
+                background-position: center top;
+                width: 7px;
+                padding: 0;
+                z-index: 1;
+                $side-margin: 15px;
+
+                &.left{
+                    margin-left: $side-margin;
+                }
+
+                &.right{
+                    margin-right: $side-margin;
+                }
+            }
+
+            .center{
+                background-image: url('/images/navigation/box-background.png');
+                background-repeat: repeat;
+                background-position: center top;
+                z-index: 0;
+                margin: 0 -3px;
+                text-align: center;
+
+                button{
+                    cursor: pointer;
+                }
+            }
+        }
+    
+        .box-footer{
+            transform: rotateX(180deg);
+        }
+
+    }
+
 }
