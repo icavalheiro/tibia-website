@@ -96,7 +96,7 @@ gulp.task('watch:style', () => {
 function informBuildFinished(cb){
     notifier.notify({
         title: 'Gulp Build',
-        message: 'Build'
+        message: 'Build Finished :D'
     });
     cb();
 }
