@@ -3,6 +3,10 @@ import "./style.css";
 
 export class Content extends Component{
     render(){
-        return <div className="content col-8">content</div>
+        return (
+            <div className="content col-8">
+                {this.props.children}    
+            </div>
+        )
     }
 }
