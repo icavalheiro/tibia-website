@@ -113,13 +113,30 @@
                 .center{
                     background-image: none;
                     background-color: rgb(13, 46, 43);
+
+                    li{
+                        border-bottom: solid 1px #4b7874;
+                        text-align: left;
+                        padding: 1px 0 5px 20px;
+
+                        a{
+                            font-family: Arial, Helvetica, sans-serif;
+                            color:#d7d7d7;
+                            font-size: 13.33px;
+                            font-weight: 700;
+
+                            &:hover{
+                                color:white;
+                            }
+                        }
+                    }
                 }
 
                 .category-button{
                     padding: 0;
                     height: 32px;
                     button{
-                        color: rgb(231, 189, 149);
+                        color: rgb(197, 167, 140);
                         background-image: url('/images/navigation/button-background.gif');
                         width: 200px;
                         height: 32px;
@@ -133,11 +150,16 @@
                         }
 
                         .row{
+                            font-family: martel;
+
                             width: 150px;
                             margin: auto;
 
                             .col{
                                 padding: 0;
+                                font-size: 21px;
+                                padding-top: 1px;
+                                font-weight: 300;
                             }
     
                             .icon{
@@ -145,6 +167,23 @@
                                 height: 32px;
                                 background-repeat: no-repeat;
                                 background-position: center top;
+                            }
+                        }
+
+
+                        &::after{
+                            content: "";
+                            width: 12px;
+                            height: 12px;
+                            position: absolute;
+                            right: 14px;
+                            bottom: 0;
+                            background-image: url('/images/navigation/plus.gif');
+                        }
+        
+                        &.opened{
+                            &::after{
+                                background-image: url('/images/navigation/minus.gif');
                             }
                         }
                     }

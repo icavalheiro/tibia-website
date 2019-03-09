@@ -26,10 +26,7 @@ function tieToggleButtons(){
             $('div[data-toggle-id='+id+']').each(function(){
                 var div = $(this);
                 div.toggle(0.0001);
-                // if(div.css("display") == "none"){
-                // } else {
-                //     div.slideUp(0.3);
-                // }
+                btn.toggleClass('opened');
             })
         })
     })

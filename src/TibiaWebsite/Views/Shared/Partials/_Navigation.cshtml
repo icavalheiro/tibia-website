@@ -2,12 +2,13 @@
 @using TibiaWebsite.Helpers
 
 @{
-    var navigationCategories = NavigationHelper.GetAllCategories();
+    var config = ConfigLoader.Load<NavigationConfig>("./Data/navigation.json");
+    var navigationCategories = config.categories;
 }
 
 <div class="navigation col-2">
     <div class="logo row">
-        <a href="~/"><img src="~/images/navigation/tibia-logo-artwork-top.gif"/></a>
+        <a href="~/"><img src="@config.logoUrl"/></a>
     </div>
 
     <!-- Login Box -->
@@ -18,8 +19,8 @@
             <div class="box-content row">
                 <div class="box-side-chain left"></div>
                 <div class="col center">
-                    <button data-type="link" href="/account/?subtopic=accountmanagement">Login</button><br/>
-                    <a href="/account/?subtopic=createaccount">Create Account</a>
+                    <button data-type="link" href="@config.loginHref">@config.loginText</button><br/>
+                    <a href="@config.createAccountHref">@config.createAccountText</a>
                 </div>
                 <div class="box-side-chain right"></div>
             </div>
@@ -36,7 +37,7 @@
             <div class="box-content row">
                 <div class="box-side-chain left"></div>
                 <div class="col center">
-                    <button data-type="link" href="/account/?subtopic=downloadclient">Download</button>
+                    <button data-type="link" href="@config.downloadHref">@config.downloadText</button>
                 </div>
                 <div class="box-side-chain right"></div>
             </div>
