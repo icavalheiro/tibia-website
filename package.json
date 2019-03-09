@@ -2,12 +2,7 @@
   "name": "tibia-website",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "prestart": "rm -rf ./.cache",
-    "start": "parcel ./src/index.html -d ./dist --public-url /",
-    "build": "parcel build ./src/index.html -d ./dist --public-url /"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/icavalheiro/tibia-website.git"
@@ -20,20 +15,15 @@
   },
   "homepage": "https://github.com/icavalheiro/tibia-website#readme",
   "dependencies": {
-    "parcel-bundler": "^1.12.0"
-  },
-  "postcss": {
-    "modules": false,
-    "plugins": {
-      "autoprefixer": {
-        "browsers": [
-          ">1%",
-          "last 4 versions",
-          "Firefox ESR",
-          "not ie < 9"
-        ],
-        "flexbox": "no-2009"
-      }
-    }
+    "browserify": "^16.2.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulplog": "^1.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   }
 }
