@@ -1,6 +1,41 @@
 .navigation{
     padding: 3px 0;
 
+    button{
+        margin-top: 1px;
+        width: 150px;
+        height: 37px;
+        border: 0;
+
+        background-color: unset;
+        background-image: url('/images/navigation/mediumbutton.gif');
+        background-position: top center;
+        background-repeat: no-repeat;
+        
+        font-family: 'Ubuntu', sans-serif;
+
+        font-size: 18px;
+        color: rgb(221, 200, 82);
+        font-weight: bold;
+
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+        &:hover{
+            background-image: url('/images/navigation/mediumbutton-over.gif');
+        }
+    }
+
+    a{
+        font-size: 11px;
+        color: rgb(190, 188, 165);
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        
+        &:hover{
+            color: rgb(138, 132, 78);
+            text-decoration: none;
+        }
+    }
+
     .logo{
         img{
             z-index: 2;
@@ -21,6 +56,7 @@
 
     .box{
         min-width: 200px;
+        margin-bottom: 15px;
 
         .box-header, .box-footer{
             background-image: url('/images/navigation/box-top.gif');
@@ -54,7 +90,10 @@
                 background-position: center top;
                 z-index: 0;
                 margin: 0 -3px;
+                padding: 0;
+                padding-bottom: 2px;
                 text-align: center;
+                line-height: 11px;
 
                 button{
                     cursor: pointer;

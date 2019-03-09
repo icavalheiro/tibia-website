@@ -2,7 +2,10 @@
   "name": "tibia-website",
   "version": "1.0.0",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "start": "gulp watch",
+    "build": "gulp build"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/icavalheiro/tibia-website.git"
