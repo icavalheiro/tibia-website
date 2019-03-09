@@ -52,4 +52,4 @@ gulp.task('watch:style', () => {
 
 // General
 gulp.task('build', gulp.parallel('style', 'javascript'));
-gulp.task('watch', gulp.parallel('watch:style', 'watch:javascript'));
+gulp.task('watch', gulp.parallel('build', 'watch:style', 'watch:javascript'));

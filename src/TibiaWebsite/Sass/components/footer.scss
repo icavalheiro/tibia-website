@@ -1,0 +1,16 @@
+.footer{
+    text-align: center;
+    font-size: 9px;
+    color: white;
+    margin: 10px 0;
+
+
+    a{
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

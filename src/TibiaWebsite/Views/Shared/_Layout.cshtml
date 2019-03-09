@@ -8,23 +8,22 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/dist/site.css" />
 </head>
-<body class="layout-base col">
+<body class="layout col">
 
     <div class="content-holder row">
-        <!-- Header -->
-        <header>
-        </header>
-        
+        <!-- Navigation -->
+        <partial name="Partials/_Navigation" />
+
         <!-- Content -->
-        <div class="container">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
-        </div>
+        <section class="content col-8">
+            @RenderBody()
+        </section>
+
+        <!-- Social -->
+        <partial name="Partials/_Social" />
 
         <!-- Footer -->
-        <footer class="border-top footer text-muted">
-        </footer>
+        <partial name="Partials/_Footer"/>
     </div>
 
     <!-- Scripts -->

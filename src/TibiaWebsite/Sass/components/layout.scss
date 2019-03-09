@@ -1,4 +1,5 @@
-.layout-base{
+.layout{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-repeat: no-repeat;
     background-position: center top;
     background-color: #051122;
@@ -10,5 +11,9 @@
     .content-holder{
         max-width: 1200px;
         margin: auto;
+    }
+
+    .content{
+        background-color: antiquewhite;
     }
 }
