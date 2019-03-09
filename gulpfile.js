@@ -8,6 +8,7 @@ var log = require('gulplog');
 var sass = require('gulp-sass');
 var sass_glob = require('gulp-sass-glob');
 var autoprefixer = require('gulp-autoprefixer');
+var notifier = require('node-notifier');
 
 // Javascript
 gulp.task('javascript', () => {
@@ -15,7 +16,8 @@ gulp.task('javascript', () => {
     var b = browserify({
         entries: './src/TibiaWebsite/Js/site.js',
         debug: true
-    });
+    })
+    .transform("babelify", {presets: ["@babel/preset-env"]});
 
     return b.bundle()
         .pipe(source('site.js'))
@@ -51,5 +53,14 @@ gulp.task('watch:style', () => {
 })
 
 // General
-gulp.task('build', gulp.parallel('style', 'javascript'));
+function informBuildFinished(cb){
+    notifier.notify({
+        title: 'Gulp Build',
+        message: 'Build'
+    });
+    cb();
+}
+
+gulp.task('build', gulp.series(gulp.parallel('style', 'javascript'), informBuildFinished));
+
 gulp.task('watch', gulp.parallel('build', 'watch:style', 'watch:javascript'));
