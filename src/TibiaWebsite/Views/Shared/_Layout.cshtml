@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tibia Website - Remake</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-
     <!-- Styles -->
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/dist/site.css" />
 </head>
 <body class="layout col">
@@ -20,7 +15,7 @@
         <partial name="Partials/_Navigation" />
 
         <!-- Content -->
-        <section class="content col-8">
+        <section class="content col-10 col-lg-8">
             @RenderBody()
         </section>
 
@@ -32,8 +27,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="~/dist/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
