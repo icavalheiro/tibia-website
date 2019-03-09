@@ -80,9 +80,9 @@ gulp.task('style', () => {
             notifyPreprocessError();
             return console.error(err);
         }))
-        .pipe(autoprefixer({
+        .pipe(gulp_if(isProdBuild, autoprefixer({
             browsers: ['last 2 versions']
-        }))
+        })))
         .pipe(gulp_if(isProdBuild, cleancss()))
         .pipe(gulp_if(!isProdBuild, sourcemaps.write('./')))
         .pipe(gulp.dest(styleDestPath));
