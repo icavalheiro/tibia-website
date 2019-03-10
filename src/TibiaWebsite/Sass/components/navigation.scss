@@ -1,4 +1,52 @@
 .navigation{
+
+    .nav-toggle-btn{
+        display: none;
+    }
+
+    @media screen and (max-width: map-get($grid-breakpoints, "xl")) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 200px;
+        background-color: #061529b2;
+        height: 100vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        border-right: solid 2px rgb(114, 98, 9);
+        transition: left 0.4s;
+
+        .nav-toggle-btn{
+            display: block;
+            position: fixed;
+            
+            // left: 160px;
+            // transition: left 0.4s;
+
+            left: 200px;
+            top: 0;
+            height: 100vh;
+            width: calc(100vw - 200px);
+            opacity: 0;
+        }
+
+        &.mobile-retracted{
+            transition: left 0.4s;
+            left: -200px;
+
+            .nav-toggle-btn{
+                top: 5px;
+                left: 10px;
+                opacity: 1;
+                width: 150px;
+                height: 37px;
+                transition: opacity 0.3s;
+            }
+        }
+    }
+
     padding: 3px 0;
 
     button{
@@ -42,6 +90,14 @@
         img{
             z-index: 2;
         }
+
+        // @media screen and (max-width: map-get($grid-breakpoints, "xl")) {
+        //     height: 15px;
+
+        //     // img{
+        //     //     display: none;
+        //     // }
+        // }
     }
 
     .row{

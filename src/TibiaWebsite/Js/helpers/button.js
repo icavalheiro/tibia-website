@@ -6,6 +6,23 @@ export default class ButtonHelper {
     setupButtons(){
         this.tieLinkButtonsHref(this.$);
         this.tieToggleButtons(this.$);
+        this.tieToggleNavButton(this.$);
+    }
+
+    tieToggleNavButton($){
+        //get all the buttons that will e used to toggle the navigation menu
+        //and then tie them to the navigation div
+        $('button[data-type=nav-toggle]').each(function(){
+            var btn = $(this);
+
+            //add a listener to click event
+            btn.click(function(){
+                $('div.navigation').each(function(){
+                    var div = $(this);
+                    div.toggleClass('mobile-retracted');
+                })
+            })
+        })
     }
 
     tieLinkButtonsHref($){
